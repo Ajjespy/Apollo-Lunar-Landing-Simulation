@@ -49,6 +49,7 @@ double ComputeDistance(double originalPosition, double velocity, double accelera
   * OUTPUT
   *     a : acceleration, in meters/second^2
   ***************************************************/
+
 double ComputeAccelertaion(double force, double mass)
 {
     double acceleration = (force / mass);
@@ -95,8 +96,11 @@ double computeVelocity(double velocity, double acceleration, double time)
     * OUTPUT
     *     y : the vertical component of the total
     ***********************************************/
-    // your function goes here
-
+double verticalAngle(double angle, double total)
+{
+    double verticalComponent = cos(angle) * total;
+    return verticalComponent;
+}
     /***********************************************
      * COMPUTE HORIZONTAL COMPONENT
      * Find the horizontal component of a velocity or acceleration.
@@ -115,8 +119,11 @@ double computeVelocity(double velocity, double acceleration, double time)
      * OUTPUT
      *     x : the vertical component of the total
      ***********************************************/
-     // your function goes here
-
+double horzontalAngle(double angle, double total)
+{
+    double verticalComponent = sin(angle) * total;
+    return verticalComponent;
+}
      /************************************************
       * COMPUTE TOTAL COMPONENT
       * Given the horizontal and vertical components of
@@ -136,9 +143,12 @@ double computeVelocity(double velocity, double acceleration, double time)
       * OUTPUT
       *    total : total component
       ***********************************************/
-      // your function goes here
+double totalComponent(double horizontal, double vertical)
+{
+    double total = pow(horizontal, 2) + pow(vertical, 2);
+    return sqrt(total);
 
-
+}
       /*************************************************
        * RADIANS FROM DEGEES
        * Convert degrees to radians:
