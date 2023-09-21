@@ -1,14 +1,15 @@
 /*************************************************************
  * 1. Name:
- *     Brighton Gold
+ *     Brighton Gold, Austin Jesperson
  * 2. Assignment Name:
  *      Practice 02: Physics simulator
  * 3. Assignment Description:
  *      Compute how the Apollo lander will move across the screen
  * 4. What was the hardest part? Be as specific as possible.
- *      Honestly I had no idea how all these functions fit together. I didn't know when to use thetotal component, why I needed it, 
+ *      Brighton - Honestly I had no idea how all these functions fit together. For example, I didn't know when to use the total component, why I needed it, ecetera.
+ *      Austin - The hardest part was working through the order to call each function. We ran into some issues with Visual Studio and its interaction with GitHub as well.
  * 5. How long did it take for you to complete the assignment?
- *      -total time in hours: reading the assignment, submitting, etc.
+ *     like 3 hours
  **************************************************************/
 
 #include <iostream>  // for CIN and COUT
