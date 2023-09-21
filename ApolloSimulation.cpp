@@ -207,27 +207,28 @@ int main()
 
     // Go through the simulator five times
       // your code goes here
-
-    aRadians = DegreestoRadians(aDegrees);
-    accelerationThrust = ComputeAccelertaion(THRUST, WEIGHT);
-    ddxThrust = horzontalAngle(aRadians, accelerationThrust);
-    ddyThrust = verticalAngle(aRadians, accelerationThrust);
-    ddx = ddxThrust;
-    ddy = ddyThrust + GRAVITY;
-    dx = computeVelocity(dx, ddx, t);
-    dy = computeVelocity(dy, ddy, t);
-    x = ComputeDistance(x, dx, ddx, t);
-    y = ComputeDistance(y, dy, ddy, t);
-    v = totalComponent(dx, dy);
-
-
-    // Output
-    cout.setf(ios::fixed | ios::showpoint);
-    cout.precision(2);
-    cout << "\tNew position:   (" << x << ", " << y << ")m\n";
-    cout << "\tNew velocity:   (" << dx << ", " << dy << ")m/s\n";
-    cout << "\tTotal velocity:  " << v << "m/s\n\n";
+    for (int c = 1; c <= 5; c++)
+    {
+        aRadians = DegreestoRadians(aDegrees);
+        accelerationThrust = ComputeAccelertaion(THRUST, WEIGHT);
+        ddxThrust = horzontalAngle(aRadians, accelerationThrust);
+        ddyThrust = verticalAngle(aRadians, accelerationThrust);
+        ddx = ddxThrust;
+        ddy = ddyThrust + GRAVITY;
+        dx = computeVelocity(dx, ddx, t);
+        dy = computeVelocity(dy, ddy, t);
+        x = ComputeDistance(x, dx, ddx, t);
+        y = ComputeDistance(y, dy, ddy, t);
+        v = totalComponent(dx, dy);
 
 
+        // Output
+        cout.setf(ios::fixed | ios::showpoint);
+        cout.precision(2);
+        cout << "\tNew position:   (" << x << ", " << y << ")m\n";
+        cout << "\tNew velocity:   (" << dx << ", " << dy << ")m/s\n";
+        cout << "\tTotal velocity:  " << v << "m/s\n\n";
+
+    }
     return 0;
 }
