@@ -194,9 +194,9 @@ int main()
     double dx = prompt("What is your horizontal velocity (m/s)? ");
     double dy = prompt("What is your vertical velocity (m/s)? ");
     double y = prompt("What is your altitude (m)? ");
-    double x = prompt("What is your position (m)? ");
+    double x = 0.0;
     double aDegrees = prompt("What is the angle of the LM where 0 is up (degrees)? ");
-    double t = prompt("What is the time interval (s)? ");
+    double t = 1.0;
     double aRadians;            // Angle in radians
     double accelerationThrust;  // Acceleration due to thrust 
     double ddxThrust;           // Horizontal acceleration due to thrust
@@ -204,31 +204,44 @@ int main()
     double ddx;                 // Total horizontal acceleration
     double ddy;                 // Total vertical acceleration
     double v;                   // Total velocity
+    int s = 0;                   // seconds passed
 
     // Go through the simulator five times
       // your code goes here
-    for (int c = 1; c <= 5; c++)
+
+    accelerationThrust = ComputeAccelertaion(THRUST, WEIGHT);
+
+    for (int i = 1; i <= 2; i ++) 
     {
         aRadians = DegreestoRadians(aDegrees);
-        accelerationThrust = ComputeAccelertaion(THRUST, WEIGHT);
         ddxThrust = horzontalAngle(aRadians, accelerationThrust);
         ddyThrust = verticalAngle(aRadians, accelerationThrust);
         ddx = ddxThrust;
         ddy = ddyThrust + GRAVITY;
-        dx = computeVelocity(dx, ddx, t);
-        dy = computeVelocity(dy, ddy, t);
-        x = ComputeDistance(x, dx, ddx, t);
-        y = ComputeDistance(y, dy, ddy, t);
-        v = totalComponent(dx, dy);
+
+        cout << "\nFor the next 5 seconds with the main engine on, the position of the lander is:\n\n";
+
+        for (int c = 1; c <= 5 ; c++)
+        {
+            dx = computeVelocity(dx, ddx, t);
+            dy = computeVelocity(dy, ddy, t);
+            x = ComputeDistance(x, dx, ddx, t);
+            y = ComputeDistance(y, dy, ddy, t);
+            v = totalComponent(dx, dy);
+            s++;
 
 
-        // Output
-        cout.setf(ios::fixed | ios::showpoint);
-        cout.precision(2);
-        cout << "\tNew position:   (" << x << ", " << y << ")m\n";
-        cout << "\tNew velocity:   (" << dx << ", " << dy << ")m/s\n";
-        cout << "\tTotal velocity:  " << v << "m/s\n\n";
-
+            // Output
+            cout.setf(ios::fixed | ios::showpoint);
+            cout.precision(2);
+            cout << " " << s << "s - x,y:(" << x << ", " << y << ")m   dx,dy:(" << dx << ", " << dy << ")m/s   speed:" << v << "m/s   angle:" << aDegrees << "deg\n";
+        }
+        cout << "\n";
+        if (i < 2)
+        {
+            aDegrees = prompt("What is the new angle of the LM where 0 is up (degrees)? ");
+        }
+        
     }
     return 0;
 }
