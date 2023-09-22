@@ -1,16 +1,16 @@
 /*************************************************************
  * 1. Name:
- *     Brighton Gold, Austin Jesperson
+ *      Brighton Gold, Austin Jesperson
  * 2. Assignment Name:
- *      Practice 02: Physics simulator
+ *      Lab 02: Apollo 11
  * 3. Assignment Description:
- *      Compute how the Apollo lander will move across the screen
+ *      Simulate the Apollo 11 landing
  * 4. What was the hardest part? Be as specific as possible.
- *      Brighton - Honestly I had no idea how all these functions fit together. For example, I didn't know when to use the total component, why I needed it, ecetera.
- *      Austin - The hardest part was working through the order to call each function. We ran into some issues with Visual Studio and its interaction with GitHub as well.
+ *      -a paragraph or two about how the assignment went for you-
  * 5. How long did it take for you to complete the assignment?
- *     like 3 hours
- **************************************************************/
+ *      -total time in hours: reading the assignment, submitting, and and writing code-
+ *****************************************************************/
+
 
 #include <iostream>  // for CIN and COUT
 using namespace std;
@@ -206,7 +206,6 @@ int main()
     double v;                   // Total velocity
 
     // Go through the simulator five times
-      // your code goes here
     for (int c = 1; c <= 5; c++)
     {
         aRadians = DegreestoRadians(aDegrees);
