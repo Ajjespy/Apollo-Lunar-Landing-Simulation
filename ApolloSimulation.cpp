@@ -207,8 +207,10 @@ int main()
     int s = 0;                   // seconds passed
 
     // Go through the simulator five times
-      // your code goes here
-    for (int c = 1; c <= 5; c++)
+
+    accelerationThrust = ComputeAccelertaion(THRUST, WEIGHT);
+
+    for (int i = 1; i <= 5; i++)
     {
         aRadians = DegreestoRadians(aDegrees);
         ddxThrust = horzontalAngle(aRadians, accelerationThrust);
