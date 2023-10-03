@@ -210,7 +210,7 @@ int main()
 
     accelerationThrust = ComputeAccelertaion(THRUST, WEIGHT);
 
-    for (int i = 1; i <= 5; i++)
+    for (int i = 1; i <= 2; i++)
     {
         aRadians = DegreestoRadians(aDegrees);
         ddxThrust = horzontalAngle(aRadians, accelerationThrust);
@@ -229,11 +229,13 @@ int main()
             v = totalComponent(dx, dy);
             s++;
 
+                
+
 
             // Output
             cout.setf(ios::fixed | ios::showpoint);
             cout.precision(2);
-            cout << " " << s << "s - x,y:(" << x << ", " << y << ")m   dx,dy:(" << dx << ", " << dy << ")m/s   speed:" << v << "m/s   angle:" << aDegrees << "deg\n";
+            cout << " " << s << "s - x,y:(" << x << ", " << y << ")m  dx,dy:(" << dx << ", " << dy << ")m/s  speed:" << v << "m/s  angle:" << aDegrees << "deg\n";
         }
         cout << "\n";
         if (i < 2)
