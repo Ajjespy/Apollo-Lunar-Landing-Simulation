@@ -30,7 +30,7 @@ list<string> arrayToList(string a[], int num)
    list<string> resultList;
    for (int i = 0; i < num; i++)
    {
-      resultList.push_back(a[i]);
+      resultList.push_back(a[i]); //iterate through array and then add to list. 
    }
    return resultList;
 }
@@ -42,8 +42,8 @@ list<string> arrayToListBackwards(string a[], int num)
 {
    list<string> resultList = arrayToList(a, num);
 
-   resultList.reverse();
-   return resultList;
+   resultList.reverse();   // discovered the reverse function which will auto reverse a list.
+   return resultList;      // Not very effcient I believe it is o(n). used also for the vector
 }
 
 /*****************************
@@ -64,8 +64,8 @@ vector<string> listToVector(const list<string>& l)
  *****************************/
 vector<string> listToVectorBackwards(const list<string>& l)
 {
-   vector<string> newVector = listToVector(l);
-   reverse(newVector.begin(), newVector.end());
+   vector<string> newVector = listToVector(l);  // call list to vector to make it a vecotor
+   reverse(newVector.begin(), newVector.end()); //reverse it and return it
    return newVector;
 }
 
