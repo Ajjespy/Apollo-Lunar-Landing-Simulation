@@ -18,5 +18,22 @@
     <ClCompile Include="ApolloSimulation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="angle lab 2\angle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Containers\containers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DemoFolder\ground.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DemoFolder\glDemo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="angle lab 2\angle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

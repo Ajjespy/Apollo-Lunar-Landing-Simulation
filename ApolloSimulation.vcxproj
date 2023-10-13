@@ -127,7 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="angle lab 2\angle.cpp" />
     <ClCompile Include="ApolloSimulation.cpp" />
+    <ClCompile Include="Containers\containers.cpp" />
+    <ClCompile Include="DemoFolder\glDemo.cpp" />
+    <ClCompile Include="DemoFolder\ground.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="angle lab 2\angle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
